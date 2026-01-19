@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl" class="scroll-smooth">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>רבקי ארנשטיין | אומנות, טעם וחוויה</title>
@@ -341,18 +342,28 @@
         background-attachment: scroll; /* מבטל אפקט פרלקס בנייד לביצועים טובים יותר */
     }
 }
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem !important; /* מקטין את הכותרת הראשית בנייד */
-        line-height: 1.2 !important;
+ 
+<style>
+    @media (max-width: 768px) {
+        /* הקטנת כותרת ראשית */
+        h1 { font-size: 2.25rem !important; line-height: 1.2 !important; }
+        
+        /* התאמת גובה ההירו למובייל */
+        .hero-bg { min-height: 60vh !important; background-attachment: scroll !important; }
+        
+        /* מניעת רווחים מיותרים בגלריה */
+        .gallery-img { width: 280px !important; height: 200px !important; }
     }
-    
-    .hero-bg {
-        background-attachment: scroll; /* מבטל אפקט פרלקס בנייד לביצועים טובים יותר */
-    }
+	html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* מונע גלילה לצדדים */
+    position: relative;
 }
-    </style>
+
+ 
+</style> 
 
     <script>
         // סקריפט פשוט להפעלת האנימציות רק כשהאלמנט נכנס לשדה הראייה (Scroll Reveal)
