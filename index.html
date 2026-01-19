@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רבקי ארנשטיין | אומנות, טעם וחוויה</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* שימוש בפונט רוביק לכותרות לאווירה יותר דינמית */
+        h1, h2, h3, h4, .font-heading { font-family: 'Rubik', sans-serif; }
+        body { font-family: 'Assistant', sans-serif; }
+        
+        /* רקע הירו - תמונה חדשה של פירות טרופיים חתוכים */
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1572557536052-161163a71c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed; /* אפקט פרלקס עדין */
+        }
+        
+        /* אנימציה עדינה בכניסה */
+        .fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(30px); }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <script>
+        // קונפיגורציה להתאמת צבעים ב-Tailwind אם רוצים לשנות את הגוון הכתום
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { DEFAULT: '#FF6B00', light: '#FF8533', dark: '#E65100' }, // כתום חי
+                        secondary: { DEFAULT: '#4ADE80', dark: '#16a34a' } // ירוק רענן
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+    <header class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-3xl font-black text-primary tracking-tight">
+			<img src="./logo.png" class="h-20 w-40 object-cover rounded-2xl shadow-md snap-center shrink-0" >
+			</div>
+            <nav class="hidden md:flex space-x-reverse space-x-10 font-semibold text-gray-600">
+                <a href="#fruit-art" class="hover:text-primary transition">אומנות הפרי</a>
+                <a href="#workshops-odt" class="hover:text-primary transition">סדנאות וגיבוש</a>
+                <a href="#balloons" class="hover:text-primary transition">עולם הבלונים</a>
+            </nav>
+            <a href="#contact" class="bg-gradient-to-r from-primary to-primary-light text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg hover:scale-105 transition transform">דברו איתי</a>
+        </div>
+		
+    </header>
+
+    <section class="hero-bg min-h-[85vh] flex items-center justify-center text-center text-white px-6 relative overflow-hidden" style="background-image: url(./image_3.png);"> 
+	
+        <div class="absolute top-10 right-10 text-6xl opacity-20 animate-bounce hidden md:block">🍓</div>
+        <div class="absolute bottom-10 left-10 text-6xl opacity-20 animate-pulse hidden md:block">🍍</div>
+        
+        <div class="max-w-4xl relative z-10 fade-in-up" style="color: black;"> 
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight drop-shadow-lg">להפוך כל אירוע<br><span class="">לחגיגה של צבע וטעם</span></h1>
+            <p class="text-xl md:text-2xl mb-10 font-light opacity-95 max-w-2xl mx-auto leading-relaxed">
+                המומחיות שלי היא לשלב בין אסתטיקה מוקפדת לחוויה בלתי נשכחת. 
+				<br>
+				מגילוף פירות אמנותי ועד סדנאות גיבוש אנרגטיות.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 fade-in-up delay-1">
+                <a href="#fruit-art" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-primary-dark transition shadow-xl hover:-translate-y-1">למגשים וגילופים</a>
+                <a href="#workshops-odt" class="bg-white text-gray-800 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition shadow-xl hover:-translate-y-1">לסדנאות חוויה</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="fruit-art" class="py-24 container mx-auto px-6 relative">
+        <div class="text-center mb-20 fade-in-up">
+             <h4 class="text-secondary font-bold tracking-wider uppercase mb-2">הצד הקולינרי</h4>
+            <h2 class="text-4xl md:text-5xl font-black text-gray-900">אומנות שכיף לאכול</h2>
+            <div class="w-24 h-1.5 bg-primary mx-auto mt-4 rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+             <div class="order-2 md:order-1 fade-in-up delay-1">
+                 <h3 class="text-3xl font-bold mb-6 flex items-center"><span class="text-4xl ml-3">🍉</span> גילוף פירות אמנותי</h3>
+                 <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                     כשהפרי הופך לפסל. טכניקות גילוף תאילנדיות ומודרניות שהופכות אבטיחים, מלונים ופירות נוספים ליצירות מרהיבות שגונבות את ההצגה בכל שולחן בר או אירוע יוקרתי.
+                 </p>
+                 <ul class="space-y-3 font-medium text-gray-700">
+                     <li class="flex items-center"><span class="bg-secondary/20 text-secondary-dark p-1 rounded-full ml-3 text-sm">✓</span> עיצובים אישיים עם כיתובים והקדשות</li>
+                     <li class="flex items-center"><span class="bg-secondary/20 text-secondary-dark p-1 rounded-full ml-3 text-sm">✓</span> מרכזי שולחן עוצרי נשימה</li>
+                 </ul>
+             </div>
+             <div class="order-1 md:order-2 relative group fade-in-up">
+                 <div class="absolute inset-0 bg-primary rounded-3xl rotate-3 opacity-20 group-hover:rotate-6 transition-transform"></div>
+                 <img src="./image_0.png" alt="גילוף אבטיח אמנותי" class="rounded-3xl shadow-2xl relative z-10 transform group-hover:-translate-y-2 transition-all w-full object-cover">
+				 <div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl hidden md:block animate-bounce" style="animation-duration: 3s;z-index: 10;">
+                        <p class="font-bold text-lg text-primary">📐 דיוק מקסימלי!</p>
+                    </div>
+             </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+             <div class="relative group fade-in-up">
+                 <div class="absolute inset-0 bg-secondary rounded-3xl -rotate-3 opacity-20 group-hover:-rotate-6 transition-transform"></div>
+                 <img src="./image_1.png" alt="מגש פירות מעוצב ועשיר" class="rounded-3xl shadow-2xl relative z-10 transform group-hover:-translate-y-2 transition-all w-full object-cover">
+				 <div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl hidden md:block animate-bounce" style="animation-duration: 3s;z-index: 10;">
+                        <p class="font-bold text-lg text-primary">📍 עיצוב ללא פשרות!</p>
+                    </div>
+             </div>
+             <div class="fade-in-up delay-1">
+                 <h3 class="text-3xl font-bold mb-6 flex items-center"><span class="text-4xl ml-3">🥝</span> מגשי אירוח יוקרתיים</h3>
+                 <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                     שילובים צבעוניים של פירות העונה הטובים ביותר, חתוכים בצורה אסתטית ומזמינה. הפתרון המושלם לאירוח ביתי, מתנות ליולדת, ישיבות עסקיות או סתם כשרוצים לפנק.
+                 </p>
+                 <ul class="space-y-3 font-medium text-gray-700">
+                     <li class="flex items-center"><span class="bg-primary/20 text-primary-dark p-1 rounded-full ml-3 text-sm">✓</span> טריות מקסימלית - נחתך בסמוך לאירוע</li>
+                     <li class="flex items-center"><span class="bg-primary/20 text-primary-dark p-1 rounded-full ml-3 text-sm">✓</span> מגוון גדלים בהתאמה לתקציב</li>
+                 </ul>
+             </div>
+        </div>
+    </section>
+
+    <section id="workshops-odt" class="py-24 bg-gradient-to-br from-orange-50 to-orange-100 relative overflow-hidden px-6">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+             <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute h-full w-full top-0 left-0"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#grid)"></path><defs><pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="currentColor" stroke-width="0.5"></path></pattern></defs></svg>
+        </div>
+
+        <div class="container mx-auto relative z-10">
+            <div class="text-center mb-20 fade-in-up">
+                <h4 class="text-primary font-bold tracking-wider uppercase mb-2">יוצאים מהשגרה</h4>
+                <h2 class="text-4xl md:text-5xl font-black">סדנאות גיבוש ו-O.D.T</h2>
+                <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">חוויות שיוצרות חיבור אמיתי, אנרגיה גבוהה ועבודת צוות מנצחת.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative fade-in-up">
+                     <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition duration-500">
+                         <img src="./image_04.png" alt="סדנת גיבוש צוות" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                     </div>
+                    <div class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl hidden md:block animate-bounce" style="animation-duration: 3s;">
+                        <p class="font-bold text-lg text-primary">⚡ אנרגיה מטורפת!</p>
+                    </div>
+                </div>
+
+                <div class="space-y-10 fade-in-up delay-1">
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border-r-4 border-primary hover:shadow-2xl transition">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <span class="bg-orange-100 p-3 rounded-xl ml-4">🎯</span>
+                            סדנאות שטח ו-O.D.T
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            פעילות חוץ (Outdoor Training) המשלבת אתגרים פיזיים קלים ומשימות חשיבה. המטרה: לשפר תקשורת, מנהיגות ופתרון בעיות תחת לחץ – והכל באווירה כיפית.
+                        </p>
+                        <div class="font-medium text-gray-800 bg-orange-50 p-4 rounded-xl">
+                            <span class="block font-bold text-primary mb-1">דוגמאות מהשטח:</span>
+                            "הגשר האנושי", משימות ניווט עיוור, בניית מתקנים מחבלים וסנאדות, אתגרי חידות קבוצתיים.
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border-r-4 border-secondary hover:shadow-2xl transition">
+                         <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <span class="bg-green-100 p-3 rounded-xl ml-4">🔪</span>
+                            סדנת "מאסטר שף" פירות
+                        </h3>
+                        <p class="text-gray-600">
+                            סדנה מעשית וחווייתית בה המשתתפים לומדים את סודות החיתוך המקצועי, עיצוב מגשים ויסודות הגילוף. כל משתתף יוצא עם יצירה משלו!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="balloons" class="py-24 container mx-auto px-6">
+        <div class="bg-white rounded-[3rem] shadow-2xl p-8 md:p-16 relative overflow-hidden border-t-8 border-purple-500 fade-in-up">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1574625878270-09f8e497137a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
+            
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h4 class="text-purple-600 font-bold tracking-wider uppercase mb-2">צבע בכל מקום</h4>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6">הפעלות ועיצובי בלונים 🎈</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        שום חגיגה לא שלמה בלי בלונים! אני מביאה את הצבע לאירוע שלכם, בין אם זה בעיצוב חלל עוצר נשימה או בהפעלה אקטיבית שתרים את האווירה.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-2 rounded-lg ml-4 text-purple-600">✨</div>
+                            <div>
+                                <h5 class="font-bold text-lg">עיצוב אירועים</h5>
+                                <p class="text-sm text-gray-600">קשתות אורגניות, עמדות צילום, ומרכזי שולחן מבלונים.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start">
+                            <div class="bg-purple-100 p-2 rounded-lg ml-4 text-purple-600">🤹‍♀️</div>
+                            <div>
+                                <h5 class="font-bold text-lg">הפעלות לכל גיל</h5>
+                                <p class="text-sm text-gray-600">סדנאות קיפול בלונים לילדים, או עמדת בלונאות פעילה באירוע.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative fade-in-up delay-1">
+                    <img src="./image_2.png" alt="עיצוב בלונים צבעוני" class="rounded-3xl shadow-xl hover:rotate-2 transition duration-500 border-4 border-purple-200">
+                    <div class="absolute -top-6 -left-6 text-6xl animate-spin-slow">🎉</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+	<section class="py-12 bg-gray-100 overflow-hidden">
+    <div class="container mx-auto px-6 mb-8 text-center">
+        <h3 class="text-2xl font-bold">טעימה מהיצירות שלי</h3>
+    </div>
+
+    <div class="relative group max-w-6xl mx-auto px-4">
+        
+        <button onclick="scrollGallery(1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 text-darkText p-3 rounded-full shadow-md hidden group-hover:flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+
+        <div id="scrollGallery" class="flex space-x-reverse space-x-6 overflow-x-auto pb-8 scrollbar-hide snap-x scroll-smooth">
+			<img src="./image_09.png" class="gallery-img h-64 w-80 object-cover rounded-2xl shadow-md snap-center shrink-0 ml-6 cursor-pointer hover:opacity-90 transition">
+			 <img src="./image_08.png" class="gallery-img h-64 w-80 object-cover rounded-2xl shadow-md snap-center shrink-0 ml-6 cursor-pointer hover:opacity-90 transition">
+             <img src="./image_07.png" class="gallery-img h-64 w-80 object-cover rounded-2xl shadow-md snap-center shrink-0 ml-6 cursor-pointer hover:opacity-90 transition">
+			 <img src="./image_06.png" class="gallery-img h-64 w-80 object-cover rounded-2xl shadow-md snap-center shrink-0 ml-6 cursor-pointer hover:opacity-90 transition">
+			 <img src="./image_05.png" class="gallery-img h-64 w-80 object-cover rounded-2xl shadow-md snap-center shrink-0 ml-6 cursor-pointer hover:opacity-90 transition">
+			 <img src="./image_04.png" class="gallery-img h-64 w-80 object-cover rounded-2xl shadow-md snap-center shrink-0 ml-6 cursor-pointer hover:opacity-90 transition">
+            </div>
+
+        <button onclick="scrollGallery(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 text-darkText p-3 rounded-full shadow-md hidden group-hover:flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+    </div>
+</section>
+
+    <section class="py-12 bg-gray-100 overflow-hidden">
+        <div class="container mx-auto px-6 mb-8">
+            <h3 class="text-2xl font-bold text-center">טעימה מהיצירות שלי</h3>
+        </div>
+		<div class="flex space-x-reverse space-x-6 overflow-x-auto pb-8 scrollbar-hide snap-x"> 
+</div>
+    </section>
+
+    <section id="contact" class="py-24 container mx-auto px-6 max-w-4xl relative">
+        <div class="text-center mb-12 fade-in-up">
+            <h2 class="text-4xl font-black">בואו נדבר על האירוע שלכם</h2>
+            <p class="text-xl text-gray-600 mt-4">השאירו פרטים ואחזור אליכם עם הצעה שאי אפשר לסרב לה</p>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-8 md:p-12 fade-in-up delay-1 relative z-10">
+            <form id="contactForm" onsubmit="sendToWhatsApp(event)" class="space-y-6 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" id="userName" placeholder="שם מלא" required class="w-full p-4 rounded-2xl bg-cream-light border border-cream-light focus:border-primary/50 focus:bg-white focus:ring-2 focus:ring-primary/10 outline-none transition text-darkText">
+        <input type="tel" id="userPhone" placeholder="טלפון נייד" required class="w-full p-4 rounded-2xl bg-cream-light border border-cream-light focus:border-primary/50 focus:bg-white focus:ring-2 focus:ring-primary/10 outline-none transition text-darkText">
+    </div>
+    <select id="userPath" class="w-full p-4 rounded-2xl bg-cream-light border border-cream-light focus:border-primary/50 focus:bg-white focus:ring-2 focus:ring-primary/10 outline-none transition cursor-pointer text-darkText/70">
+        <option value="לא נבחר">במה אתם מעוניינים?</option>
+        <option value="גילוף פירות / מגשים מעוצבים">גילוף פירות / מגשים מעוצבים</option>
+        <option value="סדנת O.D.T לצוות/קבוצה">סדנת O.D.T לצוות/קבוצה</option>
+        <option value="סדנת פירות חווייתית">סדנת פירות חווייתית</option>
+        <option value="הפעלה בבלונים">הפעלה בבלונים</option>
+    </select>
+    <textarea id="userMsg" placeholder="ספרי לי קצת על האירוע (תאריך, כמות משתתפים...)" rows="4" class="w-full p-4 rounded-2xl bg-cream-light border border-cream-light focus:border-primary/50 focus:bg-white focus:ring-2 focus:ring-primary/10 outline-none transition text-darkText"></textarea>
+    
+    <button type="submit" class="w-full bg-gradient-to-r from-primary to-primary-light text-white py-5 rounded-2xl text-2xl font-black hover:shadow-xl transform hover:scale-[1.02] transition hover:from-primary-dark hover:to-primary">
+        שלחי לי הצעה! 🎯
+    </button>
+</form>
+        </div>
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-primary opacity-10 rounded-full blur-3xl -z-10"></div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-12 text-center mt-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-black text-white mb-4">רבקי ארנשטיין</h2>
+             <p class="text-lg mb-8 max-w-md mx-auto">יוצרים חוויות בלתי נשכחות דרך טעם, צבע ועבודת צוות.</p>
+             
+             <div class="flex justify-center space-x-reverse space-x-6 mb-8">
+                 <a  class="bg-gray-800 p-3 rounded-full hover:bg-primary hover:text-white transition">📞 ⁦0542401770⁩</a>
+                 <a href="https://wa.me/c/972542401770" class="bg-gray-800 p-3 rounded-full hover:bg-secondary hover:text-white transition">📱 וואטסאפ</a>
+             </div>
+
+            <div class="border-t border-gray-800 pt-8 text-sm">
+                &copy; 2026 כל הזכויות שמורות לרבקי ארנשטיין | עיצוב פירות, סדנאות ובלונים.
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+        /* הסתרת סרגל גלילה בגלריה */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* אנימציית סיבוב איטית לבלון */
+         @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 10s linear infinite;
+        }
+		
+		/* טלפונים קטנים (עד 640 פיקסלים) */
+@media (max-width: 640px) {
+    /* סגנונות ספציפיים לנייד */
+}
+
+/* טאבלטים (בין 641 ל-1024 פיקסלים) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* התאמות למסכים בינוניים */
+}
+
+/* מסכי מחשב גדולים (מעל 1025 פיקסלים) */
+@media (min-width: 1025px) {
+    /* סגנונות למסכים רחבים */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem !important; /* מקטין את הכותרת הראשית בנייד */
+        line-height: 1.2 !important;
+    }
+    
+    .hero-bg {
+        background-attachment: scroll; /* מבטל אפקט פרלקס בנייד לביצועים טובים יותר */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem !important; /* מקטין את הכותרת הראשית בנייד */
+        line-height: 1.2 !important;
+    }
+    
+    .hero-bg {
+        background-attachment: scroll; /* מבטל אפקט פרלקס בנייד לביצועים טובים יותר */
+    }
+}
+    </style>
+
+    <script>
+        // סקריפט פשוט להפעלת האנימציות רק כשהאלמנט נכנס לשדה הראייה (Scroll Reveal)
+        document.addEventListener("DOMContentLoaded", function() {
+            const animatedElements = document.querySelectorAll('.fade-in-up');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+			
+			
+			
+			// פונקציות המודאל
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const galleryImages = document.querySelectorAll('.gallery-img');
+
+// פתיחת המודאל בעת לחיצה על תמונה
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        modalImg.src = img.src; // העתקת מקור התמונה
+        modal.classList.remove('hidden'); // הצגת המודאל
+        setTimeout(() => modalImg.classList.add('scale-100'), 10); // אנימציית כניסה
+        document.body.style.overflow = 'hidden'; // מניעת גלילה של הדף ברקע
+    });
+});
+
+// סגירת המודאל
+function closeModal() {
+    modalImg.classList.remove('scale-100');
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto'; // החזרת הגלילה
+}
+
+// סגירה בלחיצה על השטח הכהה (מחוץ לתמונה)
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+});
+
+// סגירה באמצעות מקש Escape במקלדת
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") closeModal();
+});
+
+        }); 
+		
+function scrollGallery(direction) {
+    const container = document.getElementById('scrollGallery');
+    const scrollAmount = 350; // כמות הפיקסלים להזזה בכל לחיצה
+    
+    container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+function sendToWhatsApp(event) {
+    event.preventDefault(); // מונע מהטופס לרענן את הדף
+
+    // הגדרות מספר הטלפון (שני למספר שלך בפורמט בינלאומי ללא פלוס)
+    const myNumber = "972542401770"; 
+
+    // שליפת הנתונים מהשדות
+    const name = document.getElementById('userName').value;
+    const phone = document.getElementById('userPhone').value;
+    const service = document.getElementById('userPath').value;
+    const message = document.getElementById('userMsg').value;
+
+    // בניית תוכן ההודעה
+    const text = `היי רבקי, אני רוצה הצעה לאירוע!` +
+                 `*שם:* ${name}%0A` +
+                 `*טלפון:* ${phone}%0A` +
+                 `*שירות מבוקש:* ${service}%0A` +
+                 `*פרטים נוספים:* ${message}`;
+
+    // יצירת הקישור ופתיחתו בחלון חדש
+    const whatsappUrl = `https://wa.me/${myNumber}?text=${text}`;
+    window.open(whatsappUrl, '_blank');
+}
+    </script>
+
+<div id="imageModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/90 p-4 transition-opacity duration-300">
+    <button onclick="closeModal()" class="absolute top-6 right-6 text-white text-5xl font-light hover:text-primary transition z-[110]">&times;</button>
+    
+    <img id="modalImage" src="" alt="תמונה מוגדלת" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
+</div>
+</body>
+</html>
