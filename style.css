@@ -1,0 +1,90 @@
+    <style> 
+	    /* שימוש בפונט רוביק לכותרות לאווירה יותר דינמית */
+        h1, h2, h3, h4, .font-heading { font-family: 'Rubik', sans-serif; }
+        body { font-family: 'Assistant', sans-serif; }
+        
+        /* רקע הירו - תמונה חדשה של פירות טרופיים חתוכים */
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1572557536052-161163a71c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed; /* אפקט פרלקס עדין */
+        }
+        
+        /* אנימציה עדינה בכניסה */
+        .fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(30px); }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* הסתרת סרגל גלילה בגלריה */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* אנימציית סיבוב איטית לבלון */
+         @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 10s linear infinite;
+        }
+		
+		/* טלפונים קטנים (עד 640 פיקסלים) */
+@media (max-width: 640px) {
+    /* סגנונות ספציפיים לנייד */
+}
+
+/* טאבלטים (בין 641 ל-1024 פיקסלים) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* התאמות למסכים בינוניים */
+}
+
+/* מסכי מחשב גדולים (מעל 1025 פיקסלים) */
+@media (min-width: 1025px) {
+    /* סגנונות למסכים רחבים */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem !important; /* מקטין את הכותרת הראשית בנייד */
+        line-height: 1.2 !important;
+    }
+    
+    .hero-bg {
+        background-attachment: scroll; /* מבטל אפקט פרלקס בנייד לביצועים טובים יותר */
+    }
+} 
+    @media (max-width: 768px) {
+        /* הקטנת כותרת ראשית */
+        h1 { font-size: 2.25rem !important; line-height: 1.2 !important; }
+        
+        /* התאמת גובה ההירו למובייל */
+        .hero-bg { min-height: 60vh !important; background-attachment: scroll !important; }
+        
+        /* מניעת רווחים מיותרים בגלריה */
+        .gallery-img { width: 280px !important; height: 200px !important; }
+    }
+	html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* מונע גלילה לצדדים */
+    position: relative;
+}
+
+ section {
+        width: 100%;
+        overflow-hidden: hidden; /* מונע מאלמנטים פנימיים "לדחוף" את המסך */
+    }
+	body{
+		font-family:sans-serif;
+	}
+</style> 
