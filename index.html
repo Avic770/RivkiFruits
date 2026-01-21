@@ -6,42 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>רבקי ארנשטיין | אומנות, טעם וחוויה</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@300;500;700;900&display=swap" rel="stylesheet">
-    <style>
-        /* שימוש בפונט רוביק לכותרות לאווירה יותר דינמית */
-        h1, h2, h3, h4, .font-heading { font-family: 'Rubik', sans-serif; }
-        body { font-family: 'Assistant', sans-serif; }
-        
-        /* רקע הירו - תמונה חדשה של פירות טרופיים חתוכים */
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1572557536052-161163a71c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed; /* אפקט פרלקס עדין */
-        }
-        
-        /* אנימציה עדינה בכניסה */
-        .fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(30px); }
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        
-        @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-    <script>
-        // קונפיגורציה להתאמת צבעים ב-Tailwind אם רוצים לשנות את הגוון הכתום
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: { DEFAULT: '#FF6B00', light: '#FF8533', dark: '#E65100' }, // כתום חי
-                        secondary: { DEFAULT: '#4ADE80', dark: '#16a34a' } // ירוק רענן
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@300;500;700;900&display=swap" rel="stylesheet"> 
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
@@ -80,6 +45,7 @@
     </section>
 
     <section id="fruit-art" class="py-24 container mx-auto px-6 relative">
+	
         <div class="text-center mb-20 fade-in-up">
              <h4 class="text-secondary font-bold tracking-wider uppercase mb-2">הצד הקולינרי</h4>
             <h2 class="text-4xl md:text-5xl font-black text-gray-900">אומנות שכיף לאכול</h2>
@@ -127,7 +93,7 @@
         </div>
     </section>
 
-    <section id="workshops-odt" class="py-24 bg-gradient-to-br from-orange-50 to-orange-100 relative overflow-hidden px-6">
+    <section id="workshops-odt" class="py-24 bg-primary/10 px-6 from-orange-50 to-orange-100 relative overflow-hidden px-6">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
              <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute h-full w-full top-0 left-0"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#grid)"></path><defs><pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="currentColor" stroke-width="0.5"></path></pattern></defs></svg>
         </div>
@@ -178,7 +144,7 @@
         </div>
     </section>
 
-    <section id="balloons" class="py-24 container mx-auto px-6">
+    <section id="balloons" class="py-24 bg-primary/5 px-6 from-orange-50 to-orange-100 relative overflow-hidden px-6">
         <div class="bg-white rounded-[3rem] shadow-2xl p-8 md:p-16 relative overflow-hidden border-t-8 border-purple-500 fade-in-up">
             <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1574625878270-09f8e497137a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center"></div>
             
@@ -215,7 +181,7 @@
         </div>
     </section>
     
-	<section class="py-12 bg-gray-100 overflow-hidden">
+	<section class="py-12 bg-cream/40 overflow-hidde">
     <div class="container mx-auto px-6 mb-8 text-center">
         <h3 class="text-2xl font-bold">טעימה מהיצירות שלי</h3>
     </div>
@@ -244,15 +210,7 @@
         </button>
     </div>
 </section>
-
-    <section class="py-12 bg-gray-100 overflow-hidden">
-        <div class="container mx-auto px-6 mb-8">
-            <h3 class="text-2xl font-bold text-center">טעימה מהיצירות שלי</h3>
-        </div>
-		<div class="flex space-x-reverse space-x-6 overflow-x-auto pb-8 scrollbar-hide snap-x"> 
-</div>
-    </section>
-
+ 
     <section id="contact" class="py-24 container mx-auto px-6 max-w-4xl relative">
         <div class="text-center mb-12 fade-in-up">
             <h2 class="text-4xl font-black">בואו נדבר על האירוע שלכם</h2>
@@ -298,167 +256,13 @@
         </div>
     </footer>
     
-    <style>
-        /* הסתרת סרגל גלילה בגלריה */
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-        
-        /* אנימציית סיבוב איטית לבלון */
-         @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-            animation: spin-slow 10s linear infinite;
-        }
-		
-		/* טלפונים קטנים (עד 640 פיקסלים) */
-@media (max-width: 640px) {
-    /* סגנונות ספציפיים לנייד */
-}
-
-/* טאבלטים (בין 641 ל-1024 פיקסלים) */
-@media (min-width: 641px) and (max-width: 1024px) {
-    /* התאמות למסכים בינוניים */
-}
-
-/* מסכי מחשב גדולים (מעל 1025 פיקסלים) */
-@media (min-width: 1025px) {
-    /* סגנונות למסכים רחבים */
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem !important; /* מקטין את הכותרת הראשית בנייד */
-        line-height: 1.2 !important;
-    }
-    
-    .hero-bg {
-        background-attachment: scroll; /* מבטל אפקט פרלקס בנייד לביצועים טובים יותר */
-    }
-}
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js"></script>
  
-<style>
-    @media (max-width: 768px) {
-        /* הקטנת כותרת ראשית */
-        h1 { font-size: 2.25rem !important; line-height: 1.2 !important; }
-        
-        /* התאמת גובה ההירו למובייל */
-        .hero-bg { min-height: 60vh !important; background-attachment: scroll !important; }
-        
-        /* מניעת רווחים מיותרים בגלריה */
-        .gallery-img { width: 280px !important; height: 200px !important; }
-    }
-	html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* מונע גלילה לצדדים */
-    position: relative;
-}
-
- 
-</style> 
-
-    <script>
-        // סקריפט פשוט להפעלת האנימציות רק כשהאלמנט נכנס לשדה הראייה (Scroll Reveal)
-        document.addEventListener("DOMContentLoaded", function() {
-            const animatedElements = document.querySelectorAll('.fade-in-up');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationPlayState = 'running';
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            animatedElements.forEach(el => {
-                el.style.animationPlayState = 'paused';
-                observer.observe(el);
-            });
-			
-			
-			
-			// פונקציות המודאל
-const modal = document.getElementById('imageModal');
-const modalImg = document.getElementById('modalImage');
-const galleryImages = document.querySelectorAll('.gallery-img');
-
-// פתיחת המודאל בעת לחיצה על תמונה
-galleryImages.forEach(img => {
-    img.addEventListener('click', () => {
-        modalImg.src = img.src; // העתקת מקור התמונה
-        modal.classList.remove('hidden'); // הצגת המודאל
-        setTimeout(() => modalImg.classList.add('scale-100'), 10); // אנימציית כניסה
-        document.body.style.overflow = 'hidden'; // מניעת גלילה של הדף ברקע
-    });
-});
-
-// סגירת המודאל
-function closeModal() {
-    modalImg.classList.remove('scale-100');
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto'; // החזרת הגלילה
-}
-
-// סגירה בלחיצה על השטח הכהה (מחוץ לתמונה)
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-});
-
-// סגירה באמצעות מקש Escape במקלדת
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") closeModal();
-});
-
-        }); 
-		
-function scrollGallery(direction) {
-    const container = document.getElementById('scrollGallery');
-    const scrollAmount = 350; // כמות הפיקסלים להזזה בכל לחיצה
-    
-    container.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
-    });
-}
-
-function sendToWhatsApp(event) {
-    event.preventDefault(); // מונע מהטופס לרענן את הדף
-
-    // הגדרות מספר הטלפון (שני למספר שלך בפורמט בינלאומי ללא פלוס)
-    const myNumber = "972542401770"; 
-
-    // שליפת הנתונים מהשדות
-    const name = document.getElementById('userName').value;
-    const phone = document.getElementById('userPhone').value;
-    const service = document.getElementById('userPath').value;
-    const message = document.getElementById('userMsg').value;
-
-    // בניית תוכן ההודעה
-    const text = `היי רבקי, אני רוצה הצעה לאירוע!` +
-                 `*שם:* ${name}%0A` +
-                 `*טלפון:* ${phone}%0A` +
-                 `*שירות מבוקש:* ${service}%0A` +
-                 `*פרטים נוספים:* ${message}`;
-
-    // יצירת הקישור ופתיחתו בחלון חדש
-    const whatsappUrl = `https://wa.me/${myNumber}?text=${text}`;
-    window.open(whatsappUrl, '_blank');
-}
-    </script>
-
 <div id="imageModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/90 p-4 transition-opacity duration-300">
     <button onclick="closeModal()" class="absolute top-6 right-6 text-white text-5xl font-light hover:text-primary transition z-[110]">&times;</button>
     
     <img id="modalImage" src="" alt="תמונה מוגדלת" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
-</div>
+</div> 
 </body>
 </html>
