@@ -49,11 +49,17 @@ galleryImages.forEach(img => {
     });
 });
 
-// סגירת המודאל
+ 
+			// פונקציה לסגירת המודאל
 function closeModal() {
-    modalImg.classList.remove('scale-100');
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto'; // החזרת הגלילה
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    
+    if (modal && modalImg) {
+        modalImg.classList.remove('scale-100'); // אנימציית יציאה
+        modal.classList.add('hidden'); // הסתרת המודאל
+        document.body.style.overflow = 'auto'; // החזרת הגלילה לדף
+    }
 }
 
 // סגירה בלחיצה על השטח הכהה (מחוץ לתמונה)
