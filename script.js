@@ -9,6 +9,9 @@
                     secondary: { DEFAULT: '#AED9A0', light: '#F4FAF1' }, // מנטה/מלון
                     cream: { DEFAULT: '#FFF4E0', light: '#FFF9F0' }, // שמנת
                     darkText: '#4A4A4A'
+                },
+					fontFamily: {
+                    sans: ['Assistant', 'sans-serif'],
                 }
                 }
             }
