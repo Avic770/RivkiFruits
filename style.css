@@ -1,4 +1,10 @@
     <style> 
+	.logo{
+height: 250px;
+}
+	 .background-image3{
+		 background-image: url('./image_3.png');
+	 }
 	    /* שימוש בפונט רוביק לכותרות לאווירה יותר דינמית */
         h1, h2, h3, h4, .font-heading { font-family: 'Rubik', sans-serif; }
         body { font-family: 'Assistant', sans-serif; }
@@ -40,10 +46,16 @@
 		/* טלפונים קטנים (עד 640 פיקסלים) */
 @media (max-width: 640px) {
     /* סגנונות ספציפיים לנייד */
+	.background-image3{
+		 background-image: url('./‏‏image_3_1.png');
+	 }
 }
 
 /* טאבלטים (בין 641 ל-1024 פיקסלים) */
 @media (min-width: 641px) and (max-width: 1024px) {
+	.background-image3{
+		 background-image: url('./‏‏image_3_1.png');
+	 }
     /* התאמות למסכים בינוניים */
 }
 
@@ -53,7 +65,10 @@
 }
 
 @media (max-width: 768px) {
-    h1 {
+    .background-image3{
+		 background-image: url('./image_3_1.png');
+	 }
+	h1 {
         font-size: 2.5rem !important; /* מקטין את הכותרת הראשית בנייד */
         line-height: 1.2 !important;
     }
@@ -63,6 +78,9 @@
     }
 } 
     @media (max-width: 768px) {
+		.background-image3{
+		 background-image: url('./‏‏image_3_1.png');
+	 }
         /* הקטנת כותרת ראשית */
         h1 { font-size: 2.25rem !important; line-height: 1.2 !important; }
         
