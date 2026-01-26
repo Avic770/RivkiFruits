@@ -1,12 +1,12 @@
     <style> 
  
-	 .background-image3{
-		 background-image: url('./image_3.png');
-	 }
+	 
 	    /* שימוש בפונט רוביק לכותרות לאווירה יותר דינמית */
         h1, h2, h3, h4, .font-heading { font-family: 'Rubik', sans-serif; }
         body { font-family: 'Assistant', sans-serif; }
-        
+        .background-image3{
+		 background-image: url('./image_3.png');
+	 }
         /* רקע הירו - תמונה חדשה של פירות טרופיים חתוכים */
         .hero-bg {
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1572557536052-161163a71c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
