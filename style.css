@@ -76,9 +76,7 @@
     }
 } 
     @media (max-width: 768px) {
-		.background-image3{
-		 background-image: url('./‏‏image_3_1.png');
-	 }
+	
         /* הקטנת כותרת ראשית */
         h1 { font-size: 2.25rem !important; line-height: 1.2 !important; }
         
@@ -94,6 +92,10 @@
     padding: 0;
     overflow-x: hidden; /* מונע גלילה לצדדים */
     position: relative;
+
+			.background-image3{
+		 background-image: url('./‏‏image_3_1.png');
+	 }
 }
 
  section {
