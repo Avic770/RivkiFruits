@@ -45,7 +45,7 @@
  <section id="fruit-art" class="py-24 bg-secondary-light reveal">
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="relative group">
-                <img src="./image_0.png" class="rounded-3xl shadow-xl relative z-10 w-full h-[400px] object-cover" alt="גילוף פירות">
+                <img src="./images/image_0.png" class="rounded-3xl shadow-xl relative z-10 w-full h-[400px] object-cover" alt="גילוף פירות">
                 <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg z-20 font-bold text-primary">🎯 דיוק מקסימלי!</div>
             </div>
             <div>
@@ -69,7 +69,7 @@
                 </ul>
             </div>
             <div class="order-1 md:order-2 relative group">
-                <img src="./image_1.png" class="rounded-3xl shadow-xl relative z-10 w-full h-[400px] object-cover" alt="מגשי פירות">
+                <img src="./images/image_1.png" class="rounded-3xl shadow-xl relative z-10 w-full h-[400px] object-cover" alt="מגשי פירות">
                 <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg z-20 font-bold text-secondary-dark ">📍 עיצוב ללא פשרות!</div>
             </div>
         </div>
@@ -80,7 +80,7 @@
             <h2 class="text-4xl font-black mb-16">סדנאות גיבוש ו-O.D.T 🎯</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="relative group">
-                    <img src="./image_04.png" class="rounded-3xl shadow-2xl relative z-10 w-full h-[450px] object-cover transform rotate-2 group-hover:rotate-0 transition duration-500">
+                    <img src="./images/image_04.png" class="rounded-3xl shadow-2xl relative z-10 w-full h-[450px] object-cover transform rotate-2 group-hover:rotate-0 transition duration-500">
                     <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg z-20 font-bold text-primary">⚡ אנרגיה מטורפת!</div>
                 </div>
                 <div class="space-y-6">
@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <div class="flex-1">
-                    <img src="./image_2.png" class="rounded-3xl shadow-xl w-full h-[400px] object-cover" alt="עיצובי בלונים">
+                    <img src="./images/image_2.png" class="rounded-3xl shadow-xl w-full h-[400px] object-cover" alt="עיצובי בלונים">
                 </div>	
             </div>
         </div>
@@ -119,9 +119,14 @@
             <p class="text-gray-600 mt-2">החוויה שלכם היא ההצלחה שלי</p>
         </div>
         
-        <div class="flex space-x-reverse space-x-6 overflow-x-auto pb-12 px-6 scrollbar-hide snap-x">
-            
-            <div class="testimonial-card bg-white p-8 rounded-3xl shadow-lg snap-center shrink-0 border-b-8 border-primary">
+		<div class="relative group max-w-7xl mx-auto px-4">
+    <button onclick="scrollSection('testimonialsContainer', -1)" 
+            class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-3 rounded-full shadow-lg hover:bg-white transition-all -ml-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+    </button>
+
+<div id="testimonialsContainer" class="flex overflow-x-auto scrollbar-hide gap-4 pb-4">
+         <div class="testimonial-card bg-white p-8 rounded-3xl shadow-lg snap-center shrink-0 border-b-8 border-primary">
                 <div class="text-primary text-3xl mb-4">⭐⭐⭐⭐⭐</div>
                 <p class="text-gray-600 italic mb-6">"המגש היה פשוט יצירת אמנות. האורחים לא הפסיקו לצלם ולשאול מי הכין. הכל הגיע טרי ומעוצב ברמה הכי גבוהה שיש!"</p>
                 <p class="font-bold text-darkText text-lg">— שרה לוי</p>
@@ -169,18 +174,41 @@
                 <p class="font-bold text-darkText text-lg">— אסתי וייס</p>
                 <p class="text-primary text-sm font-bold">מתנת לידה מעוצבת</p>
             </div>
+		
+		</div>
+		
+ 
+    <button onclick="scrollSection('testimonialsContainer', 1)" 
+            class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-3 rounded-full shadow-lg hover:bg-white transition-all -mr-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+    </button>
+</div>
 
-        </div>
+      
     </section>
 <section class="py-20 bg-secondary-light reveal" >
         <div class="container mx-auto px-6 text-center mb-10"><h2 class="text-3xl font-black">טעימה מהיצירות שלי</h2></div>
         <div class="relative group max-w-6xl mx-auto px-4">
-            <div id="scrollGallery" class="flex space-x-reverse space-x-6 overflow-x-auto pb-10 scrollbar-hide snap-x">
-                <img src="./image_09.png" class="h-64 w-80 object-cover rounded-2xl snap-center shrink-0 cursor-pointer" onclick="openModal(this.src)">
-                <img src="./image_08.png" class="h-64 w-80 object-cover rounded-2xl snap-center shrink-0 cursor-pointer" onclick="openModal(this.src)">
-                <img src="./image_07.png" class="h-64 w-80 object-cover rounded-2xl snap-center shrink-0 cursor-pointer" onclick="openModal(this.src)">
-                <img src="./image_06.png" class="h-64 w-80 object-cover rounded-2xl snap-center shrink-0 cursor-pointer" onclick="openModal(this.src)">
-            </div>
+           
+<div class="relative group max-w-7xl mx-auto px-4">
+    <button onclick="scrollSection('scrollGallery', -1)" 
+            class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-3 rounded-full shadow-lg hover:bg-white transition-all -ml-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+    </button>
+
+    <div id="scrollGallery" class="flex overflow-x-auto scrollbar-hide gap-4 pb-4">
+			 <img src="./images/image_09.png" class="h-64 w-80 object-cover rounded-2xl snap-center shrink-0 cursor-pointer" onclick="openModal(this.src)">
+                <img src="./images/image_08.png" class="h-64 w-80 object-cover rounded-2xl snap-center shrink-0 cursor-pointer" onclick="openModal(this.src)">
+                <img src="./images/image_07.png" class="h-64 w-80 object-cover rounded-2xl snap-center shrink-0 cursor-pointer" onclick="openModal(this.src)">
+                <img src="./images/image_06.png" class="h-64 w-80 object-cover rounded-2xl snap-center shrink-0 cursor-pointer" onclick="openModal(this.src)">
+        </div>
+
+    <button onclick="scrollSection('scrollGallery', 1)" 
+            class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-3 rounded-full shadow-lg hover:bg-white transition-all -mr-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+    </button>
+</div>
+		 
         </div>
     </section> 
     <section id="contact" class="py-24 bg-white reveal">
