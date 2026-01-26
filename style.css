@@ -1,12 +1,11 @@
     <style> 
- 
+
 	 
 	    /* שימוש בפונט רוביק לכותרות לאווירה יותר דינמית */
         h1, h2, h3, h4, .font-heading { font-family: 'Rubik', sans-serif; }
         body { font-family: 'Assistant', sans-serif; }
-        .background-image3{
-		 background-image: url('./image_3.png');
-	 }
+         
+		
         /* רקע הירו - תמונה חדשה של פירות טרופיים חתוכים */
         .hero-bg {
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1572557536052-161163a71c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
@@ -15,6 +14,7 @@
             background-attachment: fixed; /* אפקט פרלקס עדין */
         }
         
+		
         /* אנימציה עדינה בכניסה */
         .fade-in-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(30px); }
         .delay-1 { animation-delay: 0.2s; }
@@ -51,8 +51,8 @@
 
 /* טאבלטים (בין 641 ל-1024 פיקסלים) */
 @media (min-width: 641px) and (max-width: 1024px) {
-	.background-image3{
-		 background-image: url('./‏‏image_3_1.png');
+  .background-image3{
+		 background-image: url('./image_3.png') !important;
 	 }
     /* התאמות למסכים בינוניים */
 }
@@ -60,17 +60,20 @@
 /* מסכי מחשב גדולים (מעל 1025 פיקסלים) */
 @media (min-width: 1025px) {
     /* סגנונות למסכים רחבים */
+	  .background-image3{
+		 background-image: url('./image_3.png') !important;
+	 }
 }
 
 @media (max-width: 768px) {
-    .background-image3{
-		 background-image: url('./image_3_1.png');
-	 }
+   
 	h1 {
         font-size: 2.5rem !important; /* מקטין את הכותרת הראשית בנייד */
         line-height: 1.2 !important;
     }
-    
+     .background-image3{
+		 background-image: url('./image_3_1.png');
+	 }
     .hero-bg {
         background-attachment: scroll; /* מבטל אפקט פרלקס בנייד לביצועים טובים יותר */
     }
@@ -80,6 +83,10 @@
         /* הקטנת כותרת ראשית */
         h1 { font-size: 2.25rem !important; line-height: 1.2 !important; }
         
+			.background-image3{
+		 background-image: url('./‏‏image_3_1.png');
+	 }
+	 	
         /* התאמת גובה ההירו למובייל */
         .hero-bg { min-height: 60vh !important; background-attachment: scroll !important; }
         
@@ -92,10 +99,6 @@
     padding: 0;
     overflow-x: hidden; /* מונע גלילה לצדדים */
     position: relative;
-
-			.background-image3{
-		 background-image: url('./‏‏image_3_1.png');
-	 }
 }
 
  section {
@@ -128,4 +131,6 @@
         /* אפקט גלילה חלק */
         .testimonial-card { min-width: 300px; max-width: 300px; }
         @media (min-width: 768px) { .testimonial-card { min-width: 350px; } }
+		
+		
 </style> 
